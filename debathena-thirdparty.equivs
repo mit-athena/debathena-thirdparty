@@ -1,0 +1,28 @@
+Section: debathena/base
+Priority: extra
+Standards-Version: 3.6.2
+
+Package: debathena-cluster
+Version: 0.1
+Maintainer: Debathena Project <debathena@mit.edu>
+Depends: debathena-thirdparty-accessories,
+ debathena-thirdparty-audio,
+ debathena-thirdparty-communication,
+ debathena-thirdparty-graphics,
+ debathena-thirdparty-information,
+ debathena-thirdparty-languages,
+ debathena-thirdparty-libraries,
+ debathena-thirdparty-numerical,
+ debathena-thirdparty-programming,
+ debathena-thirdparty-simulation,
+ debathena-thirdparty-sound,
+ debathena-thirdparty-text,
+ debathena-thirdparty-utilities
+
+Copyright: ../common/copyright
+Readme: ../common/README-meta.in
+Description: Athena 10 third-party software suite.
+ This includes a set of subpackages of commonly-used third-party software, and
+ is intended for cluster machines though usable anywhere.  Direct
+ questions about the contents of the thirdparty software hierarchy
+ to 3partysw@mit.edu.
