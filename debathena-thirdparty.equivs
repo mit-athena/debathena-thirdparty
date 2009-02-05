@@ -2,7 +2,7 @@ Section: debathena/base
 Priority: extra
 Standards-Version: 3.6.2
 
-Package: debathena-cluster
+Package: debathena-thirdparty
 Version: 0.1
 Maintainer: Debathena Project <debathena@mit.edu>
 Depends: debathena-thirdparty-accessories,
