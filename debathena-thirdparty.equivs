@@ -21,7 +21,7 @@ Depends: debathena-thirdparty-accessories,
 
 Copyright: ../common/copyright
 Readme: ../common/README-meta.in
-Description: Athena 10 third-party software suite.
+Description: Debathena third-party software metapackage
  This includes a set of subpackages of commonly-used third-party software, and
  is intended for cluster machines though usable anywhere.  Direct
  questions about the contents of the thirdparty software hierarchy
