@@ -1,0 +1,123 @@
+#!/bin/sh
+#
+# debathena-thirdparty-installer 
+
+LISTDIR=/var/lib/debathena-thirdparty
+LOG=/var/log/athena-thirdparty
+STATFILE=/var/lib/debathena-thirdparty/status
+FLAGFILE=/var/lib/debathena-thirdparty/update_required
+
+status=ok
+statusmsg="Nothing to do"
+
+complain() {
+    status="error"
+    statusmsg="$*"
+}
+
+whine() {
+    status="warning"
+    statusmsg="$*"
+}
+	
+save_state() {
+    rm -f $statfile
+    echo "$status|$statusmsg" > $STATFILE
+}  
+
+save_success() {
+    status="ok"
+    statusmsg="$*"
+}
+
+finish() {
+    echo "*Ending thirdparty installation at $(date)"
+    echo "-----"
+    echo
+    rm -f /var/run/athena-nologin
+    save_state
+    exit
+}
+
+should_install() {
+    # Removing any debathena package is not allowed.
+    if apt-get -s install "$@" | egrep -q '^Remv debathena-'; then
+	return 1
+    else
+	return 0
+    fi
+}
+	
+
+
+
+install() {
+    if [ 0 != "$(id -u)" ]; then
+	echo "Root privileges required for installation." >&2
+	exit 1
+    fi
+    touch /var/run/athena-nologin
+    exec 3>&1
+    exec >> $LOG 2>&1
+    trap finish EXIT
+    echo "** Beginning thirdparty installation at $(date)"
+    export DEBIAN_FRONTEND=noninteractive
+    echo "** Required package list:"
+    cat "${LISTDIR}/dependencies"
+    echo "** Trying monolithic transaction..."
+    if should_install $(cat ${LISTDIR}/dependencies) &&
+	apt-get -y install $(cat ${LISTDIR}/dependencies); then
+	echo "**Monolithic transaction succeeded"
+    else
+	echo "** Installing required packages one by one..."
+	for pkg in $(cat "${LISTDIR}/dependencies"); do
+	    echo "** Installing $pkg..."
+	    if ! should_install $pkg; then
+		echo "** Installation of $pkg is IMPOSSIBLE"
+		complain "Some required packages failed to install"
+	    else
+		apt-get -y install $pkg
+		if [ $? != 0 ]; then
+		    echo "** Installation of $pkg FAILED"
+		    complain "Some required packages failed to install"
+		fi
+	    fi
+	done
+    fi
+    echo "** Recommended package list:"
+    cat "${LISTDIR}/recommendations"
+    echo "** Installing recommended packages..."
+    for pkg in $(cat "${LISTDIR}/recommendations"); do
+	echo "** Installing $pkg..."
+	if ! should_install $pkg; then
+	    echo "** Installation of $pkg is IMPOSSIBLE"
+	    whine "Some optional packages failed to install"
+	else
+	    apt-get -y install $pkg
+	    if [ $? != 0 ]; then
+		echo "** Installation of $pkg FAILED"
+		whine "Some optional packages failed to install"
+	    fi
+	fi
+    done
+    rm $FLAGFILE
+    save_success "Packages installed ok"
+}
+
+case "$1" in 
+    install)
+	install
+	;;
+    up-to-date)
+	[ -e "$FLAGFILE" ] && exit 1
+	exit 0
+	;;
+    *)
+	echo "Usage: $0 [install | up-to-date]"
+	exit 1
+	;;
+esac
+exit 0
+
+
+    

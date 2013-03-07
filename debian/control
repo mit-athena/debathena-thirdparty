@@ -1,0 +1,17 @@
+Source: debathena-thirdparty
+Section: debathena/base
+Priority: extra
+Standards-Version: 3.9.1
+Maintainer: Debathena Project <debathena@mit.edu>
+Build-Depends: cdbs, debhelper (>= 6)
+
+Package: debathena-thirdparty
+Architecture: all
+Depends: libapt-pkg-perl, ${misc:Depends}
+Replaces: debathena-thirdparty-accessories, debathena-thirdparty-audio, debathena-thirdparty-communication, debathena-thirdparty-graphics, debathena-thirdparty-information, debathena-thirdparty-languages, debathena-thirdparty-libraries, debathena-thirdparty-numerical, debathena-thirdparty-programming, debathena-thirdparty-simulation, debathena-thirdparty-sound, debathena-thirdparty-text, debathena-thirdparty-utilities
+Breaks: debathena-thirdparty-accessories, debathena-thirdparty-audio, debathena-thirdparty-communication, debathena-thirdparty-graphics, debathena-thirdparty-information, debathena-thirdparty-languages, debathena-thirdparty-libraries, debathena-thirdparty-numerical, debathena-thirdparty-programming, debathena-thirdparty-simulation, debathena-thirdparty-sound, debathena-thirdparty-text, debathena-thirdparty-utilities
+Description: Debathena thirdparty software, monolithic version
+ This ships a suite of software, known as "third party software".  Its
+ only purpose is to install software already available in Ubuntu or
+ Debian.  It is only intended for use on public, IS&T-maintained
+ workstations.

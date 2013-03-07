@@ -1,0 +1,5 @@
+debathena-thirdparty (1.0) unstable; urgency=low
+
+  * Initial release (Trac: #1156)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Thu, 07 Mar 2013 14:50:54 -0500

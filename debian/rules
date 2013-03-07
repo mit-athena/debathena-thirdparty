@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+common-build-indep::
+	./generate-package-list.pl
+
+clean::
+	rm -f recommendations dependencies
+
