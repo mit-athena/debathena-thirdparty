@@ -1,11 +1,14 @@
 #!/bin/sh
 #
-# debathena-thirdparty-installer 
+# debathena-thirdparty "installer"
+#
+# Consider "set -e" at some point
 
 LISTDIR=/var/lib/debathena-thirdparty
 LOG=/var/log/athena-thirdparty
 STATFILE=/var/lib/debathena-thirdparty/status
 FLAGFILE=/var/lib/debathena-thirdparty/update_required
+NOLOGIN=/var/run/athena-nologin
 
 status=ok
 statusmsg="Nothing to do"
@@ -21,7 +24,7 @@ whine() {
 }
 	
 save_state() {
-    rm -f $statfile
+    rm -f $STATFILE
     echo "$status|$statusmsg" > $STATFILE
 }  
 
@@ -34,7 +37,7 @@ finish() {
     echo "*Ending thirdparty installation at $(date)"
     echo "-----"
     echo
-    rm -f /var/run/athena-nologin
+    rm -f $NOLOGIN
     save_state
     exit
 }
@@ -47,16 +50,13 @@ should_install() {
 	return 0
     fi
 }
-	
-
-
 
 install() {
-    if [ 0 != "$(id -u)" ]; then
+    if [ "0" != "$(id -u)" ]; then
 	echo "Root privileges required for installation." >&2
 	exit 1
     fi
-    touch /var/run/athena-nologin
+    touch $NOLOGIN
     exec 3>&1
     exec >> $LOG 2>&1
     trap finish EXIT
@@ -65,16 +65,21 @@ install() {
     echo "** Required package list:"
     cat "${LISTDIR}/dependencies"
     echo "** Trying monolithic transaction..."
-    if should_install $(cat ${LISTDIR}/dependencies) &&
-	apt-get -y install $(cat ${LISTDIR}/dependencies); then
-	echo "**Monolithic transaction succeeded"
+    if should_install $(cat ${LISTDIR}/dependencies); then
+	echo "** Simulation successful, continuing..."
+	if apt-get -y install $(cat ${LISTDIR}/dependencies); then
+	    echo "** Monolithic transaction succeeded."
+	else
+	    echo "** Monolitic transaction failed (shouldn't happen)"
+	fi
     else
+	echo "** Simulation unsuccessful (would remove debathena packages)"
 	echo "** Installing required packages one by one..."
 	for pkg in $(cat "${LISTDIR}/dependencies"); do
 	    echo "** Installing $pkg..."
 	    if ! should_install $pkg; then
 		echo "** Installation of $pkg is IMPOSSIBLE"
-		complain "Some required packages failed to install"
+		complain "Some required packages are impossible to install"
 	    else
 		apt-get -y install $pkg
 		if [ $? != 0 ]; then
@@ -91,7 +96,7 @@ install() {
 	echo "** Installing $pkg..."
 	if ! should_install $pkg; then
 	    echo "** Installation of $pkg is IMPOSSIBLE"
-	    whine "Some optional packages failed to install"
+	    whine "Some optional packages are impossible to install"
 	else
 	    apt-get -y install $pkg
 	    if [ $? != 0 ]; then
