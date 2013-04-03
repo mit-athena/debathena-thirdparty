@@ -3,11 +3,11 @@ Section: debathena/base
 Priority: extra
 Standards-Version: 3.9.3
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: cdbs, debhelper (>= 6)
+Build-Depends: cdbs, debhelper (>= 6), libapt-pkg-perl
 
 Package: debathena-thirdparty
 Architecture: all
-Depends: libapt-pkg-perl, ${misc:Depends}
+Depends: ${misc:Depends}
 Replaces: debathena-thirdparty-accessories, debathena-thirdparty-audio, debathena-thirdparty-communication, debathena-thirdparty-graphics, debathena-thirdparty-information, debathena-thirdparty-languages, debathena-thirdparty-libraries, debathena-thirdparty-numerical, debathena-thirdparty-programming, debathena-thirdparty-simulation, debathena-thirdparty-sound, debathena-thirdparty-text, debathena-thirdparty-utilities
 Breaks: debathena-thirdparty-accessories, debathena-thirdparty-audio, debathena-thirdparty-communication, debathena-thirdparty-graphics, debathena-thirdparty-information, debathena-thirdparty-languages, debathena-thirdparty-libraries, debathena-thirdparty-numerical, debathena-thirdparty-programming, debathena-thirdparty-simulation, debathena-thirdparty-sound, debathena-thirdparty-text, debathena-thirdparty-utilities
 Description: Debathena thirdparty software, monolithic version

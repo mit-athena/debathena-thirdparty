@@ -1,3 +1,11 @@
+debathena-thirdparty (1.1) unstable; urgency=low
+
+  * Supply an athinfo defs file
+  * Cleanup the status and update_required files in the prerm
+  * Build-Depend, not Depend, on libapt-pkg-perl
+
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 03 Apr 2013 15:53:45 -0400
+
 debathena-thirdparty (1.0) unstable; urgency=low
 
   * Initial release (Trac: #1156)
