@@ -1,3 +1,10 @@
+debathena-thirdparty (1.2) unstable; urgency=low
+
+  * Add git-buildpackage configuration
+  * Set source format to 3.0 (native)
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 29 Sep 2013 05:24:10 -0400
+
 debathena-thirdparty (1.1) unstable; urgency=low
 
   * Supply an athinfo defs file
