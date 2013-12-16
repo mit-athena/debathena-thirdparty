@@ -1,4 +1,0 @@
-dependencies var/lib/debathena-thirdparty
-recommendations var/lib/debathena-thirdparty
-debian/thirdparty usr/lib/debathena-thirdparty
-debian/debathena-thirdparty.defs etc/athena/athinfo.defs.d

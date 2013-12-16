@@ -1,9 +1,18 @@
 debathena-thirdparty (1.2) unstable; urgency=low
 
+  [ Alexander Chernyakhovsky ]
   * Add git-buildpackage configuration
   * Set source format to 3.0 (native)
 
- -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 29 Sep 2013 05:24:10 -0400
+  [ Jonathan Reed ]
+  * Use chdist to generate the list of packages on Ubuntu, so as to
+    include multiverse.
+  * Build-Depend on lsb-release (for lsb_release) and devscripts (for chdist)
+  * Syntax errors in the common package list are now fatal
+  * This package is now an arch-dependent package, since the final package
+    list will differ across architectures (I'm look at you, mit-scheme)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Mon, 16 Dec 2013 13:42:19 -0500
 
 debathena-thirdparty (1.1) unstable; urgency=low
 

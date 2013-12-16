@@ -15,8 +15,10 @@ xmms2
 ?xmcd
 #debathena-thirdparty-communication
 tnef
+pan
 #debathena-thirdparty-graphics
-?xdot
+xdot
+?gle-graphics
 inventor-data
 inventor-demo
 inventor-doc
@@ -61,6 +63,7 @@ gerbv
 pdftoipe
 mgp
 graphviz
+mesa-utils
 ?povray
 ?povray-doc
 ?povray-examples
@@ -75,6 +78,8 @@ weblint-perl
 liferea
 postgresql-client
 artha
+?amaya
+?amaya-doc
 #debathena-thirdparty-languages
 gccgo
 jmol
@@ -82,6 +87,7 @@ dos2unix
 mit-scheme mit-scheme-doc
 ?eclipse-cdt
 ?clisp-dev
+proofgeneral-coq
 cmake
 python-all-dev
 python-numpy
@@ -116,15 +122,20 @@ ocaml-libs
 scala
 irb
 flex
+ipython-notebook
+libzmq1
+coq
+coqide
+proofgeneral
 #debathena-thirdparty-libraries
 ?libatlas-base-dev
 ?libatlas-sse-dev
 ?libatlas-sse2-dev
 ?libatlas-doc
 ?libmpc2
-libcv-dev
-wine
-wine-dev
+?libcv-dev
+?wine
+?wine-dev
 ?xulrunner-dev
 liblapack-dev
 liblapack-doc
@@ -201,7 +212,9 @@ fuse-utils
 python-psycopg2
 libppl-c2 | libppl-c4
 libcurl4-gnutls-dev
+iwidgets4
 libmpfr-dev
+libmpfr1ldbl
 #debathena-thirdparty-numerical
 maxima
 xmaxima
@@ -239,6 +252,7 @@ mono-vbnc
 monodoc-browser
 mono-mcs
 mono-utils
+ironpython
 ikvm
 #debathena-thirdparty-simulation
 lp-solve
@@ -277,6 +291,7 @@ harminv
 mpb
 mpb-doc
 openbabel
+jmol jmol-applet
 #debathena-thirdparty-sound
 sox
 libsox-dev
@@ -294,10 +309,9 @@ xemacs21
 xpdf
 jedit
 pdfedit
+artha
 gnome-dictionary
 #debathena-thirdparty-utilities
-?amaya
-?amaya-doc
 nfs-common
 rcs
 g3data
@@ -320,6 +334,8 @@ scratchbox2
 mtools
 dosemu
 rlwrap
+ksh
+dos2unix
 
 
 

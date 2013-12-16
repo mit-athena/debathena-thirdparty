@@ -1,2 +1,0 @@
-thirdparty	cat /var/lib/debathena-thirdparty/status
-thirdparty-upd	test -e /var/lib/debathena-thirdparty/update_required && echo no || echo yes
