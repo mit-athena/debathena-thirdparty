@@ -1,3 +1,11 @@
+debathena-thirdparty (1.2.1) unstable; urgency=low
+
+  * Document that the athinfo defs file was removed in 1.2
+  * Support the forced inclusion of distro-specific dependencies,
+    for things that can't be verified in the APT cache
+
+ -- Jonathan Reed <jdreed@mit.edu>  Mon, 30 Dec 2013 10:19:09 -0500
+
 debathena-thirdparty (1.2) unstable; urgency=low
 
   [ Alexander Chernyakhovsky ]

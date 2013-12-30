@@ -80,8 +80,8 @@ while (<COMMON>) {
     s/\s+$//;
     next if /^#/;
     next unless /\S/;
-    if (/^-/) {
-	die "Syntax error: package exclusion in the common file, line $.";
+    if (/^[-\+]/) {
+	die "Syntax error: forced inclusion or exclusion in the common file, line $.";
     } 
     if (/^(\S+) \| (\S+)$/) {
 	debug("Examining conditional line: $_");
@@ -129,6 +129,9 @@ if (-f join('/', $opt_l, $codename)) {
 	} elsif (/^\?(\S+)$/) {
 	    debug("Adding $1 to recommendations");
 	    $packages{$1} = 2;
+	} elsif (/^\+(\S+)$/) {
+	    debug("Force-adding $1 to recommendations");
+	    $packages{$1} = 3;
 	} else {
 	    debug("Adding $_ to dependencies");
 	    $packages{$_} = 1;
@@ -140,6 +143,10 @@ if (-f join('/', $opt_l, $codename)) {
 }
 
 foreach my $pkgname (sort(keys(%packages))) {
+    if ($packages{$pkgname} == 3) {
+	warn("Dependency-checking suppressed for $pkgname");
+	next;
+    }
     my $pkg = $cache->{$pkgname};
     if (! $pkg) {
 	debug("Removing $pkgname as it can't be found in the APT cache.");
