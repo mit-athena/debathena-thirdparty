@@ -8,6 +8,7 @@ Build-Depends: debhelper (>= 7.0.50~), libapt-pkg-perl, lsb-release, devscripts
 Package: debathena-thirdparty
 Architecture: any
 Depends: ${misc:Depends}, ${debathena-thirdparty-depends}
+Conflicts: mpb (>= 1.5~rc1-1~)
 Recommends: ${debathena-thirdparty-recommends}
 Replaces: debathena-thirdparty-accessories, debathena-thirdparty-audio, debathena-thirdparty-communication, debathena-thirdparty-graphics, debathena-thirdparty-information, debathena-thirdparty-languages, debathena-thirdparty-libraries, debathena-thirdparty-numerical, debathena-thirdparty-programming, debathena-thirdparty-simulation, debathena-thirdparty-sound, debathena-thirdparty-text, debathena-thirdparty-utilities
 Breaks: debathena-thirdparty-accessories, debathena-thirdparty-audio, debathena-thirdparty-communication, debathena-thirdparty-graphics, debathena-thirdparty-information, debathena-thirdparty-languages, debathena-thirdparty-libraries, debathena-thirdparty-numerical, debathena-thirdparty-programming, debathena-thirdparty-simulation, debathena-thirdparty-sound, debathena-thirdparty-text, debathena-thirdparty-utilities

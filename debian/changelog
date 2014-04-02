@@ -1,3 +1,11 @@
+debathena-thirdparty (1.2.2) unstable; urgency=low
+
+  * Provide a symlink /usr/share/libctl3 pointing at /usr/share/libctl,
+    needed for the mpb package, per alexp.
+  * Conflict with the fixed version of mpb (5.1~rc1-1).
+
+ -- Jonathan Reed <jdreed@mit.edu>  Thu, 03 Apr 2014 08:40:01 -0400
+
 debathena-thirdparty (1.2.1) unstable; urgency=low
 
   * Document that the athinfo defs file was removed in 1.2
