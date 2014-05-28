@@ -199,9 +199,9 @@ liblog4net1.2-cil
 dx
 dx-doc
 dxsamples
-guile-1.8
-guile-1.8-doc
-guile-1.8-dev
+guile-2.0
+guile-2.0-doc
+guile-2.0-dev
 guile-cairo
 libgl1-mesa-dev
 libboost-dev

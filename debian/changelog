@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.3) unstable; urgency=low
+
+  * Bump guile to 2.0 which is in precise and trusty
+
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 28 May 2014 09:45:36 -0400
+
 debathena-thirdparty (1.2.2) unstable; urgency=low
 
   * Provide a symlink /usr/share/libctl3 pointing at /usr/share/libctl,
