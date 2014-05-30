@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.4) unstable; urgency=low
+
+  * Drop maxima-emacs on Precise, because of dependency resolution issues
+
+ -- Jonathan Reed <jdreed@mit.edu>  Fri, 30 May 2014 15:09:43 -0400
+
 debathena-thirdparty (1.2.3) unstable; urgency=low
 
   * Bump guile-dev to 2.0 for Trusty
