@@ -1,3 +1,10 @@
+debathena-thirdparty (1.2.5) UNRELEASED; urgency=low
+
+  * Add smlnj for Trusty (Trac: #1457)
+  * Add python-qt4 and python-qt4-dev (Trac: #1457)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Mon, 28 Jul 2014 15:06:59 -0400
+
 debathena-thirdparty (1.2.4) unstable; urgency=low
 
   * Drop maxima-emacs on Precise, because of dependency resolution issues
