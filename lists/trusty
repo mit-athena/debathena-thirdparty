@@ -5,3 +5,4 @@ octave
 octave-doc
 octave-htmldoc
 liboctave-dev
+mesa-vdpau-drivers

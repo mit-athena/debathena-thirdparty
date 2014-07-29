@@ -1,8 +1,11 @@
-debathena-thirdparty (1.2.5.1) UNRELEASED; urgency=low
+debathena-thirdparty (1.2.5.1) unstable; urgency=low
 
   * Bring in Octave for trusty (Trac: #1516)
+  * Add triangle-bin, gerris-mpi, openmpi-bin, openmpi-checkpoint, and
+    libjpeg6 (Trac: #1516)
+  * Add mesa-vdpau-drivers for trusty only (Trac: #1516)
 
- -- Jonathan Reed <jdreed@mit.edu>  Tue, 29 Jul 2014 11:04:43 -0400
+ -- Jonathan Reed <jdreed@mit.edu>  Tue, 29 Jul 2014 11:07:17 -0400
 
 debathena-thirdparty (1.2.5) unstable; urgency=low
 

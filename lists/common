@@ -70,6 +70,7 @@ mesa-utils
 ?povray-includes
 ?sdr
 ?xprint-utils
+libjpeg62
 #debathena-thirdparty-information
 ncbi-tools-x11
 wordnet
@@ -288,6 +289,10 @@ mpb
 mpb-doc
 openbabel
 jmol jmol-applet
+gerris-mpi
+openmpi-bin
+openmpi-checkpoint
+triangle-bin
 #debathena-thirdparty-sound
 sox
 libsox-dev
