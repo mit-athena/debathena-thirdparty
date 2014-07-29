@@ -1,3 +1,8 @@
 +openfoam222
 +paraviewopenfoam3120
 -maxima-emacs
+octave3.2
+octave3.2-doc
+octave3.2-emacsen
+octave3.2-headers
+octave3.2-htmldoc

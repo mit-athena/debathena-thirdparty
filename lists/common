@@ -227,11 +227,7 @@ gnumeric
 gnumeric-doc
 gnumeric-plugins-extra
 gnuplot-doc
-octave3.2
-octave3.2-doc
-octave3.2-headers
-octave3.2-htmldoc
-octave3.2-emacsen
+# Octave moved to distro-specific files, 29 Jul 2014
 pari-gp
 pari-gp2c
 pari-doc

@@ -1,3 +1,7 @@
 -guile-1.8-dev
 guile-2.0-dev
 smlnj
+octave
+octave-doc
+octave-htmldoc
+liboctave-dev
