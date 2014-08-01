@@ -1,3 +1,10 @@
+debathena-thirdparty (1.2.5.2) unstable; urgency=low
+
+  * Add engauge-digitizer, engauge-digitizer-doc, and cmake-curses-gui
+    (Trac: #1520)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Fri, 01 Aug 2014 10:10:02 -0400
+
 debathena-thirdparty (1.2.5.1) unstable; urgency=low
 
   * Bring in Octave for trusty (Trac: #1516)

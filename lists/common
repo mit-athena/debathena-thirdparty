@@ -217,6 +217,7 @@ iwidgets4
 libmpfr-dev
 libmpfr1ldbl
 #debathena-thirdparty-numerical
+engauge-digitizer engauge-digitizer-doc
 maxima
 xmaxima
 maxima-doc
@@ -238,6 +239,7 @@ singular
 libsingular-dev
 grace
 #debathena-thirdparty-programming
+cmake-curses-gui
 libfltk1.3 | libfltk1.1
 libfltk1.3-dev | libfltk1.1-dev
 tcl-dev
