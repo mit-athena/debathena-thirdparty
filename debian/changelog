@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.6) UNRELEASED; urgency=low
+
+  * Add avogadro (Trac: #1510)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 13 Aug 2014 08:30:09 -0400
+
 debathena-thirdparty (1.2.5.2) unstable; urgency=low
 
   * Add engauge-digitizer, engauge-digitizer-doc, and cmake-curses-gui

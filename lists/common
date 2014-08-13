@@ -254,6 +254,7 @@ mono-utils
 ironpython
 ikvm
 #debathena-thirdparty-simulation
+avogadro
 lp-solve
 lp-solve-doc
 liblpsolve55-dev
