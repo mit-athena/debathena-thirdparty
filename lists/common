@@ -1,7 +1,7 @@
 # Thirdparty common file list
-# Packages listed here will be installed if available
-# Preceeding the package name with a question mark (?foo)
-# means that failing to install that package is not a fatal error
+#
+# See BUILDING for syntax
+#
 #debathena-thirdparty-accessories
 xtightvncviewer
 xcal

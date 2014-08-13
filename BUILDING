@@ -1,0 +1,34 @@
+This package uses plain text lists of package names to generate
+per-distro, per-architecture packages for debathena-thirdparty:
+
+lists/common: Common package list
+lists/$(lsb_release -sc): Per-distro amendments to the common list
+
+The lists files have a specific syntax:
+Line                            Meaning
+----                            -------
+packagename                     Depend on packagename
+packagename otherpackage        Depend packagename and otherpackage
+                                but remove otherpackage if packagename
+                                cannot be installed (useful for, e.g.
+                                not installing helper applications if
+                                the real application isn't there)
+package1 | package2             Depend on package1 or package2.  Unlike
+                                dpkg syntax, will only short-circuit
+                                from the left (package2 will not be
+                                checked unless package1 has no
+                                installation candidate)
+?packagename                    Recommend package name
+#something                      A comment (will be ignored)
+
+The lists files for specific codenames have a slight variation on the
+above syntax.
+Note: conditional (|) is not accepted in distro-specific files
+
++packagename                    Depend on packagename, even if it
+                                cannot be found in the APT cache
+                                (use with care)
+-packagename                    Remove packagename entirely (it may
+                                still be pulled in if something else
+                                depends on it, but this package will
+                                neither Depend nor Recommend it)
