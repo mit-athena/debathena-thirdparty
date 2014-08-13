@@ -73,7 +73,7 @@ mesa-utils
 libjpeg62
 #debathena-thirdparty-information
 ncbi-tools-x11
-wordnet
+wordnet wordnet-gui
 dict
 weblint-perl
 liferea

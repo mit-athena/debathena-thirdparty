@@ -1,9 +1,10 @@
-debathena-thirdparty (1.2.6) UNRELEASED; urgency=low
+debathena-thirdparty (1.2.6) unstable; urgency=low
 
   * Add avogadro (Trac: #1510)
   * Add BUILDING file to document how to build this package
+  * Add wordnet-gui (Trac: #1516)
 
- -- Jonathan Reed <jdreed@mit.edu>  Wed, 13 Aug 2014 08:37:45 -0400
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 13 Aug 2014 08:38:37 -0400
 
 debathena-thirdparty (1.2.5.2) unstable; urgency=low
 
