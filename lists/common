@@ -9,6 +9,7 @@ rxvt
 nautilus-open-terminal
 eterm
 #debathena-thirdparty-audio
+python-pyaudio python-pyaudio-doc
 mpg123
 gxmms2
 xmms2

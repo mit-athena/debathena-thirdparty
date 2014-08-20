@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.7) unstable; urgency=low
+
+  * Add python-pyaudio (Trac: #1527)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 20 Aug 2014 14:02:43 -0400
+
 debathena-thirdparty (1.2.6) unstable; urgency=low
 
   * Add avogadro (Trac: #1510)
