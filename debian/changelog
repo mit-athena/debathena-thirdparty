@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.7.1) unstable; urgency=low
+
+  * python-pyaudio-doc is not a thing on precise; make it a recommendation
+
+ -- Jonathan Reed <jdreed@mit.edu>  Fri, 22 Aug 2014 12:10:07 -0400
+
 debathena-thirdparty (1.2.7) unstable; urgency=low
 
   * Add python-pyaudio (Trac: #1527)
