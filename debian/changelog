@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.8) unstable; urgency=low
+
+  * Add alex (Trac: #1532), for 6.035
+
+ -- Jonathan Reed <jdreed@mit.edu>  Mon, 08 Sep 2014 16:48:25 -0400
+
 debathena-thirdparty (1.2.7.1) unstable; urgency=low
 
   * python-pyaudio-doc is not a thing on precise; make it a recommendation
