@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.10) unstable; urgency=low
+
+  * Add openfoam231 and paraviewopenfoam410 for Trusty only (Trac: #1558)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 15 Apr 2015 15:56:53 -0400
+
 debathena-thirdparty (1.2.9) unstable; urgency=low
 
   * Add asymptote (all) and libpoppler-qt4-4 (Trusty only), per alexp
