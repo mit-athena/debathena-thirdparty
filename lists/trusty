@@ -7,5 +7,5 @@ octave-htmldoc
 liboctave-dev
 mesa-vdpau-drivers
 libpoppler-qt4-4
-+openfoam231
++openfoam240
 +paraviewopenfoam410
