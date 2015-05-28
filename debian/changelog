@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.11) unstable; urgency=low
+
+  * Actually add openfoam231 and paraviewopenfoam410 for Trusty
+
+ -- Jonathan Reed <jdreed@mit.edu>  Thu, 28 May 2015 12:21:09 -0400
+
 debathena-thirdparty (1.2.10) unstable; urgency=low
 
   * Add openfoam231 and paraviewopenfoam410 for Trusty only (Trac: #1558)
