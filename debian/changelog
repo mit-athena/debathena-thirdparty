@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.11.2) unstable; urgency=low
+
+  * Add python-openbabel for Trusty
+
+ -- Sean Preston <wpreston@mit.edu>  Tue, 20 Sep 2016 12:57:11 -0700
+
 debathena-thirdparty (1.2.11.1) unstable; urgency=low
 
   * Bump openfoam to 240 per alexp
