@@ -1,3 +1,9 @@
+debathena-thirdparty (1.2.11.3) unstable; urgency=low
+
+  * Add new packages and release per alexp
+
+ -- Sean Preston <wpreston@mit.edu>  Thu, 15 Mar 2018 09:10:43 -0700
+
 debathena-thirdparty (1.2.11.2) unstable; urgency=low
 
   * Add python-openbabel for Trusty
